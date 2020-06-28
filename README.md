@@ -481,3 +481,10 @@ Job: Seed_Job
 
 Configure the seed job as follows
 
+![b](https://user-images.githubusercontent.com/66811679/85941640-426fd880-b8e1-11ea-84c6-d727b5905980.PNG)
+
+![c](https://user-images.githubusercontent.com/66811679/85941671-659a8800-b8e1-11ea-9b10-ae0cae66c212.jpg)
+
+As soon as the developer commits and pushes the **dsl.groovy** script to the GitHub repository, the **Seed_Job** gets triggered
+
+
