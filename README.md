@@ -513,7 +513,7 @@ Kubernetes_Deployment job:
 
 Application_Monitoring Job:
 
-![o](https://user-images.githubusercontent.com/66811679/85943483-a00a2200-b8ed-11ea-9553-94254439c6d0.jpg)
+![o](https://user-images.githubusercontent.com/66811679/85943767-633f2a80-b8ef-11ea-98b8-8c412eac43f6.jpg)
 
 ## Website:
 
