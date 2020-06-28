@@ -490,3 +490,32 @@ As soon as the developer commits and pushes the **dsl.groovy** script to the Git
 ![d](https://user-images.githubusercontent.com/66811679/85942306-a399ab00-b8e5-11ea-96bc-27b339d1dc0a.jpg)
 
 
+![e](https://user-images.githubusercontent.com/66811679/85942994-4eac6380-b8ea-11ea-9d23-4c32ade1f4f4.jpg)
+
+Seed job thus creates a chain of all the Jobs we had written a script for.
+
+
+![f](https://user-images.githubusercontent.com/66811679/85943156-6c2dfd00-b8eb-11ea-8cff-fd2fc195d64e.jpg)
+
+Code_Interpreter job:
+
+
+![g](https://user-images.githubusercontent.com/66811679/85943353-c1b6d980-b8ec-11ea-8d22-9d1e1c09af9f.jpg)
+
+
+![h](https://user-images.githubusercontent.com/66811679/85943373-e01cd500-b8ec-11ea-90cc-43fcaaa20d4d.jpg)
+
+Kubernetes_Deployment job:
+
+
+
+![j](https://user-images.githubusercontent.com/66811679/85943405-1ce8cc00-b8ed-11ea-9c31-a3f293a149cb.jpg)
+
+Application_Monitoring Job:
+
+![o](https://user-images.githubusercontent.com/66811679/85943483-a00a2200-b8ed-11ea-9553-94254439c6d0.jpg)
+
+## Website:
+
+![P](https://user-images.githubusercontent.com/66811679/85943543-eb243500-b8ed-11ea-8540-69b360451bad.jpg)
+
