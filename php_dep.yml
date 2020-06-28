@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: php-dep
+
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webapp
+
+
+  template:
+    metadata: 
+      name: php-dep 
+      labels:
+        app: webapp
+
+
+    spec: 
+      volumes:
+        - name: php-pv
+          persistentVolumeClaim:
+            claimName: php-pv-claim
+
+      containers: 
+        - name: php-dep
+          image: dockerninad07/apache-php-server
+          volumeMounts:
+            - mountPath: "/var/log/httpd/"
+              name: php-pv
