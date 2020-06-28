@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: http-dep
+
+
+spec:
+  replicas: 3
+  
+  selector:
+    matchLabels:
+      app: webapp
+
+
+  template:
+    metadata: 
+      name: http-dep 
+      labels:
+        app: webapp
+
+
+    spec: 
+      volumes:
+        - name: http-pv
+          persistentVolumeClaim:
+            claimName: http-pv-claim
+      containers: 
+        - name: http-dep
+          image: dockerninad07/apache-server
+          volumeMounts:
+            - mountPath: "/var/log/httpd/"
+              name: http-pv
+
