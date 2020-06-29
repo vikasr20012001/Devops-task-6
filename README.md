@@ -7,16 +7,19 @@
 The following project showcases writing such a Groovy script to achieve complete automation that the DevOps team need.
 
 ## Pre-process:
+
 I] Before starting the project make sure that the Jenkins package is updated. 
-Use yum update jenkins command to update it.
+Use **yum update jenkins** command to update it.
 
 II] Download the following Jenkins plugins:
 
-1.PostBuildScript
-2.Job DSL
+**1.PostBuildScript**
+
+**2.Job DSL**
 
 
 ## Project:
+
 ## 1] Dockerfiles for HTML and PHP containers
 
 ```javascript
@@ -353,6 +356,7 @@ job("Code_Interpreter") {
 ## Job 2: Kubernetes_Deployment
 
 This Job will take inputs from the **Code_Interpreter** Job to know the code language and will create the volumes, deployments and the services using the configuration files we had created earlier.
+
 ```javascript
 job("Kubernetes_Deployment") {
 
@@ -394,7 +398,11 @@ job("Kubernetes_Deployment") {
 
 ## Job 3: Application_Monitoring
 
-This Job will monitor our running application, every minute. It will retrieve the running state code from the application. If the code is 200, that means the application is running properly, then the Job will end with exit code 0. but if the code is 500 pointing out to some error, the Job will end with an exit code 1, thereby triggering the next Job.
+This Job will monitor our running application, every minute.
+It will retrieve the running state code from the application.
+If the code is 200, that means the application is running properly, then the Job will end with exit code 0.
+but if the code is 500 pointing out to some error, the Job will end with an exit code 1, thereby triggering the next Job.
+
 ```javascript
 job("Application_Monitoring") {
   
@@ -424,7 +432,9 @@ If the Application_Monitoring Job exits with an error code 1, this job gets trig
 ## Job 4: Redeployment
 
 If the **Application_Monitoring** Job exits with an error code 1, this job gets triggered.
+
 It will relaunch all the containers and Deployments on which the application was running.
+
 It will do this by simply triggering the **Code_Interpreter Job**.
 
 ```javascript
@@ -477,7 +487,7 @@ Go to **Jenkins > Manage Jenkins > Manage Nodes and Clouds > Configure Clouds > 
 
 ![a](https://user-images.githubusercontent.com/66811679/85941439-4818ee80-b8e0-11ea-9e0b-d832056efbd7.jpg)
 
-Job: Seed_Job
+## Job: Seed_Job
 
 Configure the seed job as follows
 
@@ -497,7 +507,7 @@ Seed job thus creates a chain of all the Jobs we had written a script for.
 
 ![f](https://user-images.githubusercontent.com/66811679/85943156-6c2dfd00-b8eb-11ea-8cff-fd2fc195d64e.jpg)
 
-Code_Interpreter job:
+## Code_Interpreter job:
 
 
 ![g](https://user-images.githubusercontent.com/66811679/85943353-c1b6d980-b8ec-11ea-8d22-9d1e1c09af9f.jpg)
@@ -505,13 +515,13 @@ Code_Interpreter job:
 
 ![h](https://user-images.githubusercontent.com/66811679/85943373-e01cd500-b8ec-11ea-90cc-43fcaaa20d4d.jpg)
 
-Kubernetes_Deployment job:
+## Kubernetes_Deployment job:
 
 
 
 ![j](https://user-images.githubusercontent.com/66811679/85943405-1ce8cc00-b8ed-11ea-9c31-a3f293a149cb.jpg)
 
-Application_Monitoring Job:
+## Application_Monitoring Job:
 
 ![o](https://user-images.githubusercontent.com/66811679/85943767-633f2a80-b8ef-11ea-98b8-8c412eac43f6.jpg)
 
